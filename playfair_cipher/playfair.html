@@ -1,0 +1,164 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../bootstrap/bootstrap.min.css">
+    <title>Playfair Cipher</title>
+</head>
+<body>
+
+    <nav
+        class="nav justify-content-center sticky-top bg-black" 
+    >
+        <a class="nav-link text-light" href="../caesar_cipher/caesar.html" aria-current="page"
+            >Caesar</a
+        >
+        <a class="nav-link text-light" href="../monoalphabetic_cipher/monoalphabetic.html">Monoalphabetic</a>
+        <a class="nav-link text-info" href="../playfair_cipher/playfair.html">Playfair</a>
+    </nav>
+    
+    <div class="container">
+        
+        <div class="d-flex align-items-center justify-content-center vh-100">
+
+            <div class="w-50">
+                <h1 class="text-center fw-bold mb-4" style="margin-top: 10rem;">Playfair Cipher</h1>
+
+                <div class="w-100 border p-5 shadow-sm">
+                    <div class="mb-5">
+                        <label for="" class="form-label fw-bold">Encrypt or Decrypt</label>
+                        <select
+                            class="form-select"
+                            name=""
+                            id="encrypt-or-decrypt"
+                        >
+                            <option selected value="encrypt">Encrypt</option>
+                            <option value="decrypt">Decrypt</option>
+                        </select>
+                    </div>
+                
+
+                    <div class="mb-3">
+                        <label for="message" class="form-label fw-bold" id="message-label">Message to Encrypt</label>
+                        <textarea
+                            class="form-control"
+                            name="message"
+                            id="message"
+                            rows=5 
+                        ></textarea>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="keyword" class="form-label fw-bold">Keyword</label>
+                        <input
+                            type="text"
+                            class="form-control"
+                            name="keyword"
+                            id="keyword"
+                        />
+                    </div>
+
+                    <div class="mb-3">
+                       <div
+                        class="table-responsive d-flex justify-content-center"
+                       >
+                            <table
+                                class="table table-striped table-hover table-borderless table-primary align-middle text-center w-50"
+                                id="cipher-text-matrix"
+                            >
+                                <thead class="table-light">
+                                    <caption>
+                                    </caption>
+                                    <tr>
+                                        
+                                    </tr>
+                                </thead>
+                                <tbody class="table-group-divider">
+                                    <tr
+                                        class="table-primary"
+                                    >
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+
+                                    </tr>
+                                    <tr
+                                        class="table-primary"
+                                    >
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr
+                                        class="table-primary"
+                                    >
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr
+                                        class="table-primary"
+                                    >
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>   
+                                    <tr
+                                        class="table-primary"
+                                    >
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>  
+                                </tbody>
+                                <tfoot>
+                                    
+                                </tfoot>
+                            </table>
+                       </div>
+                       <div class="d-flex justify-content-center m-3 gap-3">
+                            <button type="button" class="btn btn-outline-dark" id="default-cipher-text">Default</button>
+                            <button type="button" class="btn btn-info" id="matrix-from-keyword">Generate From Keyword</button>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="encoded-message" class="form-label fw-bold" id="converted-message-label">Encrypted Message</label>
+                        <textarea
+                            class="form-control"
+                            name="converted-message"
+                            id="converted-message"
+                            rows=5 
+                            readonly
+                        ></textarea>
+                    </div>
+
+                    <div class="d-grid gap-2">
+                        <button
+                            type="button"
+                            name=""
+                            id="save"
+                            class="btn btn-dark"
+                        >
+                            Save
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    
+    <script src="playfair.js"></script>
+</body>
+</html>
