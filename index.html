@@ -1,0 +1,89 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../bootstrap/bootstrap.min.css">
+    <title>Caesar Cipher</title>
+</head>
+<body>
+
+    <nav
+        class="nav justify-content-center sticky-top bg-black"
+    >
+        <a class="nav-link text-info" href="caesar_cipher/caesar.html" aria-current="page"
+            >Caesar</a
+        >
+        <a class="nav-link text-light" href="monoalphabetic_cipher/monoalphabetic.html">Monoalphabetic</a>
+        <a class="nav-link text-light" href="playfair_cipher/playfair.html">Playfair</a>
+    </nav>
+    
+    <div class="container">
+        <div class="d-flex align-items-center justify-content-center vh-100">
+
+            <div class="w-50">
+                <h1 class="text-center fw-bold mb-4">Caesar Cipher</h1>
+
+                <div class="w-100 border p-5 shadow-sm">
+                    <div class="mb-5">
+                        <label for="" class="form-label fw-bold">Encrypt or Decrypt</label>
+                        <select
+                            class="form-select"
+                            name=""
+                            id="encrypt-or-decrypt"
+                        >
+                            <option selected value="encrypt">Encrypt</option>
+                            <option value="decrypt">Decrypt</option>
+                        </select>
+                    </div>
+                
+
+                    <div class="mb-3">
+                        <label for="message" class="form-label fw-bold" id="message-label">Message to Encrypt</label>
+                        <textarea
+                            class="form-control"
+                            name="message"
+                            id="message"
+                            rows=5 
+                        ></textarea>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="shift" class="form-label fw-bold">Shift</label>
+                        <input
+                            type="number"
+                            class="form-control"
+                            name="shift"
+                            id="shift"
+                        />
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="encoded-message" class="form-label fw-bold" id="converted-message-label">Encrypted Message</label>
+                        <textarea
+                            class="form-control"
+                            name="converted-message"
+                            id="converted-message"
+                            rows=5 
+                            readonly
+                        ></textarea>
+                    </div>
+
+                    <div class="d-grid gap-2">
+                        <button
+                            type="button"
+                            name=""
+                            id="save"
+                            class="btn btn-dark"
+                        >
+                            Save
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    
+    <script src="caesar_cipher/caesar.js"></script>
+</body>
+</html>
